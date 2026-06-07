@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOST KINGDOMS | Ancient Civilizations Electronic Experience</title>
+    <meta name="description" content="Dance where forgotten empires awaken. December 12, 2027 - Buenos Aires. The most immersive electronic experience ever created.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="eye-of-horus">
+                <svg viewBox="0 0 200 120" class="eye-svg">
+                    <path class="eye-path" d="M20,60 Q60,10 100,60 Q140,110 180,60" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+                    <path class="eye-path" d="M20,60 Q60,110 100,60 Q140,10 180,60" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+                    <circle class="eye-iris" cx="100" cy="60" r="20" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+                    <circle class="eye-pupil" cx="100" cy="60" r="8" fill="url(#goldGrad)"/>
+                    <line class="eye-tear" x1="100" y1="80" x2="100" y2="110" stroke="url(#goldGrad)" stroke-width="2"/>
+                    <defs>
+                        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#c9a84c"/>
+                            <stop offset="50%" style="stop-color:#f0d68a"/>
+                            <stop offset="100%" style="stop-color:#c9a84c"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="preloader-text">LOST KINGDOMS</div>
+            <div class="preloader-sub">Awakening the ancient spirits...</div>
+            <div class="preloader-bar"><div class="preloader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">𓂀</span>
+                <span class="logo-text">LOST KINGDOMS</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#tickets" class="nav-link">Tickets</a>
+                <a href="#lineup" class="nav-link">Lineup</a>
+                <a href="#stages" class="nav-link">Stages</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#tickets" class="nav-cta">BUY TICKETS</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="#tickets" class="mobile-link">Tickets</a>
+            <a href="#lineup" class="mobile-link">Lineup</a>
+            <a href="#stages" class="mobile-link">Stages</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#faq" class="mobile-link">FAQ</a>
+            <a href="#tickets" class="mobile-cta">BUY TICKETS</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-video-container">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+            <div class="sandstorm" id="sandstorm"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">𓃭</span>
+                <span>Buenos Aires, Argentina</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line title-line-1">LOST</span>
+                <span class="title-line title-line-2">KINGDOMS</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                ANCIENT CIVILIZATIONS ELECTRONIC EXPERIENCE
+            </p>
+
+            <p class="hero-tagline">
+                <em>"Dance where forgotten empires awaken."</em>
+            </p>
+
+            <div class="hero-date">
+                <div class="date-icon">𓁹</div>
+                <div class="date-info">
+                    <span class="date-day">DECEMBER 12, 2027</span>
+                    <span class="date-location">Buenos Aires, Argentina</span>
+                </div>
+            </div>
+
+            <!-- Countdown -->
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">000</span>
+                    <span class="countdown-label">DAYS</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">HOURS</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">MINUTES</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">SECONDS</span>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#tickets" class="btn btn-primary">
+                    <span class="btn-icon">𓋴</span>
+                    <span>BUY TICKETS</span>
+                    <span class="btn-glow"></span>
+                </a>
+                <a href="#" class="btn btn-secondary" id="watchTrailer">
+                    <span class="btn-icon"><i class="fas fa-play"></i></span>
+                    <span>WATCH TRAILER</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span class="scroll-text">SCROLL TO EXPLORE</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+
+        <div class="hero-hieroglyphs">
+            <span>𓀀</span><span>𓁹</span><span>𓂀</span><span>𓃭</span>
+            <span>𓆣</span><span>𓇋</span><span>𓈖</span><span>𓋴</span>
+            <span>𓌙</span><span>𓍯</span><span>𓎡</span><span>𓏏</span>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-count="12">0</span><span class="stat-suffix">H</span>
+                    <span class="stat-label">NON-STOP MUSIC</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">EPIC STAGES</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-count="50">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">DRONE SHOW</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-count="5000">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">CAPACITY</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section id="tickets" class="section tickets-section">
+        <div class="section-bg-pattern"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge reveal">𓋴 CLAIM YOUR PASSAGE</span>
+                <h2 class="section-title reveal">TICKETS</h2>
+                <p class="section-subtitle reveal">Choose your destiny. Limited availability for each tier.</p>
+            </div>
+
+            <div class="tickets-grid">
+                <!-- Early Explorer -->
+                <div class="ticket-card reveal" data-delay="0">
+                    <div class="ticket-tier">𓂀</div>
+                    <div class="ticket-header">
+                        <h3 class="ticket-name">Early Explorer</h3>
+                        <div class="ticket-price">
+                            <span class="price-currency">USD</span>
+                            <span class="price-amount">39</span>
+                        </div>
+                    </div>
+                    <ul class="ticket-features">
+                        <li><i class="fas fa-check"></i> General Admission</li>
+                        <li><i class="fas fa-check"></i> Welcome Drink</li>
+                        <li><i class="fas fa-check"></i> Access to All Stages</li>
+                        <li><i class="fas fa-check"></i> Event Wristband</li>
+                    </ul>
+                    <div class="ticket-availability">
+                        <div class="availability-header">
+                            <span>Remaining</span>
+                            <span class="availability-count">42/100</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="58"></div>
+                        </div>
+                    </div>
+                    <button class="ticket-btn">
+                        <span>SELECT PASS</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Pharaoh Pass -->
+                <div class="ticket-card featured reveal" data-delay="150">
+                    <div class="ticket-badge">MOST POPULAR</div>
+                    <div class="ticket-tier">𓁹</div>
+                    <div class="ticket-header">
+                        <h3 class="ticket-name">Pharaoh Pass</h3>
+                        <div class="ticket-price">
+                            <span class="price-currency">USD</span>
+                            <span class="price-amount">89</span>
+                        </div>
+                    </div>
+                    <ul class="ticket-features">
+                        <li><i class="fas fa-check"></i> VIP Admission</li>
+                        <li><i class="fas fa-check"></i> Fast Track Entry</li>
+                        <li><i class="fas fa-check"></i> VIP Lounge Access</li>
+                        <li><i class="fas fa-check"></i> Welcome Cocktail</li>
+                        <li><i class="fas fa-check"></i> Viewing Platform</li>
+                        <li><i class="fas fa-check"></i> Premium Wristband</li>
+                    </ul>
+                    <div class="ticket-availability">
+                        <div class="availability-header">
+                            <span>Remaining</span>
+                            <span class="availability-count">27/75</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="64"></div>
+                        </div>
+                    </div>
+                    <button class="ticket-btn featured-btn">
+                        <span>SELECT PASS</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Golden Dynasty -->
+                <div class="ticket-card reveal" data-delay="300">
+                    <div class="ticket-tier">𓆣</div>
+                    <div class="ticket-header">
+                        <h3 class="ticket-name">Golden Dynasty</h3>
+                        <div class="ticket-price">
+                            <span class="price-currency">USD</span>
+                            <span class="price-amount">199</span>
+                        </div>
+                    </div>
+                    <ul class="ticket-features">
+                        <li><i class="fas fa-check"></i> Ultra VIP Admission</li>
+                        <li><i class="fas fa-check"></i> Front Stage Access</li>
+                        <li><i class="fas fa-check"></i> VIP Lounge Access</li>
+                        <li><i class="fas fa-check"></i> Open Bar 2 Hours</li>
+                        <li><i class="fas fa-check"></i> Meet & Greet DJs</li>
+                        <li><i class="fas fa-check"></i> Exclusive Merchandise</li>
+                        <li><i class="fas fa-check"></i> Dedicated Host</li>
+                    </ul>
+                    <div class="ticket-availability">
+                        <div class="availability-header">
+                            <span>Remaining</span>
+                            <span class="availability-count">12/30</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="60"></div>
+                        </div>
+                    </div>
+                    <button class="ticket-btn">
+                        <span>SELECT PASS</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Oracle Table -->
+                <div class="ticket-card oracle reveal" data-delay="450">
+                    <div class="ticket-tier">𓃭</div>
+                    <div class="ticket-header">
+                        <h3 class="ticket-name">Oracle Table</h3>
+                        <div class="ticket-price">
+                            <span class="price-currency">USD</span>
+                            <span class="price-amount">1200</span>
+                        </div>
+                        <span class="price-note">Table for 6 guests</span>
+                    </div>
+                    <ul class="ticket-features">
+                        <li><i class="fas fa-check"></i> VIP Table for 6 Persons</li>
+                        <li><i class="fas fa-check"></i> Champagne Service</li>
+                        <li><i class="fas fa-check"></i> Premium Bottle Service</li>
+                        <li><i class="fas fa-check"></i> Private Security</li>
+                        <li><i class="fas fa-check"></i> Elevated Platform</li>
+                        <li><i class="fas fa-check"></i> Dedicated Server</li>
+                        <li><i class="fas fa-check"></i> Backstage Access</li>
+                    </ul>
+                    <div class="ticket-availability">
+                        <div class="availability-header">
+                            <span>Remaining</span>
+                            <span class="availability-count">3/8</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="62"></div>
+                        </div>
+                    </div>
+                    <button class="ticket-btn">
+                        <span>RESERVE TABLE</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lineup Section -->
+    <section id="lineup" class="section lineup-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge reveal">𓁹 THE ORACLE HAS SPOKEN</span>
+                <h2 class="section-title reveal">LINEUP</h2>
+                <p class="section-subtitle reveal">The gods have summoned the finest selectors from across the realm.</p>
+            </div>
+
+            <div class="lineup-categories">
+                <button class="lineup-tab active" data-stage="all">All Artists</button>
+                <button class="lineup-tab" data-stage="ra">Temple of Ra</button>
+                <button class="lineup-tab" data-stage="babylon">Babylon Underground</button>
+                <button class="lineup-tab" data-stage="atlantis">Atlantis</button>
+            </div>
+
+            <div class="lineup-grid">
+                <!-- Headliners -->
+                <div class="lineup-card headliner reveal" data-stage="ra">
+                    <div class="lineup-image">
+                        <div class="lineup-placeholder">
+                            <span>𓀀</span>
+                        </div>
+                        <div class="lineup-overlay">
+                            <div class="lineup-socials">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-spotify"></i></a>
+                                <a href="#"><i class="fab fa-soundcloud"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineup-info">
+                        <span class="lineup-tag">HEADLINER</span>
+                        <h3 class="lineup-name">TBA</h3>
+                        <p class="lineup-genre">Techno / Melodic</p>
+                        <span class="lineup-stage"><i class="fas fa-fire"></i> Temple of Ra</span>
+                    </div>
+                </div>
+
+                <div class="lineup-card headliner reveal" data-stage="ra">
+                    <div class="lineup-image">
+                        <div class="lineup-placeholder">
+                            <span>𓁹</span>
+                        </div>
+                        <div class="lineup-overlay">
+                            <div class="lineup-socials">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-spotify"></i></a>
+                                <a href="#"><i class="fab fa-soundcloud"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineup-info">
+                        <span class="lineup-tag">HEADLINER</span>
+                        <h3 class="lineup-name">TBA</h3>
+                        <p class="lineup-genre">Progressive House</p>
+                        <span class="lineup-stage"><i class="fas fa-fire"></i> Temple of Ra</span>
+                    </div>
+                </div>
+
+                <div class="lineup-card reveal" data-stage="ra">
+                    <div class="lineup-image">
+                        <div class="lineup-placeholder">
+                            <span>𓂀</span>
+                        </div>
+                        <div class="lineup-overlay">
+                            <div class="lineup-socials">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-spotify"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineup-info">
+                        <span class="lineup-tag">SPECIAL GUEST</span>
+                        <h3 class="lineup-name">TBA</h3>
+                        <p class="lineup-genre">Melodic Techno</p>
+                        <span class="lineup-stage"><i class="fas fa-fire"></i> Temple of Ra</span>
+                    </div>
+                </div>
+
+                <div class="lineup-card reveal" data-stage="babylon">
+                    <div class="lineup-image">
+                        <div class="lineup-placeholder">
+                            <span>𓃭</span>
+                        </div>
+                        <div class="lineup-overlay">
+                            <div class="lineup-socials">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-soundcloud"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineup-info">
+                        <span class="lineup-tag">DEEP STAGE</span>
+                        <h3 class="lineup-name">TBA</h3>
+                        <p class="lineup-genre">Deep House / Organic</p>
+                        <span class="lineup-stage"><i class="fas fa-leaf"></i> Babylon Underground</span>
+                    </div>
+                </div>
+
+                <div class="lineup-card reveal" data-stage="babylon">
+                    <div class="lineup-image">
+                        <div class="lineup-placeholder">
+                            <span>𓆣</span>
+                        </div>
+                        <div class="lineup-overlay">
+                            <div class="lineup-socials">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-soundcloud"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineup-info">
+                        <span class="lineup-tag">DEEP STAGE</span>
+                        <h3 class="lineup-name">TBA</h3>
+                        <p class="lineup-genre">Organic House</p>
+                        <span class="lineup-stage"><i class="fas fa-leaf"></i> Babylon Underground</span>
+                    </div>
+                </div>
+
+                <div class="lineup-card reveal" data-stage="atlantis">
+                    <div class="lineup-image">
+                        <div class="lineup-placeholder">
+                            <span>𓈖</span>
+                        </div>
+                        <div class="lineup-overlay">
+                            <div class="lineup-socials">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-soundcloud"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineup-info">
+                        <span class="lineup-tag">SUNRISE STAGE</span>
+                        <h3 class="lineup-name">TBA</h3>
+                        <p class="lineup-genre">Afro House / Progressive</p>
+                        <span class="lineup-stage"><i class="fas fa-water"></i> Atlantis</span>
+                    </div>
+                </div>
+
+                <div class="lineup-card reveal" data-stage="atlantis">
+                    <div class="lineup-image">
+                        <div class="lineup-placeholder">
+                            <span>𓋴</span>
+                        </div>
+                        <div class="lineup-overlay">
+                            <div class="lineup-socials">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-soundcloud"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineup-info">
+                        <span class="lineup-tag">SUNRISE STAGE</span>
+                        <h3 class="lineup-name">TBA</h3>
+                        <p class="lineup-genre">Progressive House</p>
+                        <span class="lineup-stage"><i class="fas fa-water"></i> Atlantis</span>
+                    </div>
+                </div>
+
+                <div class="lineup-card reveal" data-stage="ra">
+                    <div class="lineup-image">
+                        <div class="lineup-placeholder">
+                            <span>𓌙</span>
+                        </div>
+                        <div class="lineup-overlay">
+                            <div class="lineup-socials">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineup-info">
+                        <span class="lineup-tag">LIVE ACT</span>
+                        <h3 class="lineup-name">Live Percussion</h3>
+                        <p class="lineup-genre">Tribal / Percussion</p>
+                        <span class="lineup-stage"><i class="fas fa-fire"></i> Temple of Ra</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lineup-cta reveal">
+                <p>More artists to be revealed...</p>
+                <a href="#" class="btn btn-outline">FOLLOW FOR UPDATES</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stages Section -->
+    <section id="stages" class="section stages-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge reveal">𓆣 THREE WORLDS AWAIT</span>
+                <h2 class="section-title reveal">STAGES</h2>
+                <p class="section-subtitle reveal">Each stage is a portal to a different ancient civilization.</p>
+            </div>
+
+            <div class="stages-showcase">
+                <!-- Temple of Ra -->
+                <div class="stage-card reveal">
+                    <div class="stage-visual">
+                        <div class="stage-icon">
+                            <svg viewBox="0 0 100 100" class="pyramid-svg">
+                                <polygon points="50,10 90,90 10,90" fill="none" stroke="url(#stageGold)" stroke-width="1.5"/>
+                                <polygon points="50,25 78,85 22,85" fill="none" stroke="url(#stageGold)" stroke-width="0.5" opacity="0.5"/>
+                                <circle cx="50" cy="45" r="8" fill="none" stroke="url(#stageGold)" stroke-width="1"/>
+                                <defs>
+                                    <linearGradient id="stageGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#c9a84c"/>
+                                        <stop offset="100%" style="stop-color:#f0d68a"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="stage-glow"></div>
+                    </div>
+                    <div class="stage-content">
+                        <span class="stage-number">01</span>
+                        <h3 class="stage-name">Temple of Ra</h3>
+                        <p class="stage-description">The main stage. A colossal LED pyramid rises from the depths, surrounded by golden laser beams and illuminated Egyptian columns. 3D mapping transforms the temple walls into living ancient art.</p>
+                        <div class="stage-features">
+                            <span><i class="fas fa-compact-disc"></i> Techno</span>
+                            <span><i class="fas fa-compact-disc"></i> Melodic</span>
+                            <span><i class="fas fa-compact-disc"></i> Progressive</span>
+                        </div>
+                        <div class="stage-tech">
+                            <div class="tech-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>Giant LED Pyramid</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-wand-magic-sparkles"></i>
+                                <span>3D Mapping</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-sun"></i>
+                                <span>Golden Lasers</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-building-columns"></i>
+                                <span>Egyptian Columns</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Babylon Underground -->
+                <div class="stage-card reverse reveal reveal-right">
+                    <div class="stage-visual">
+                        <div class="stage-icon babylon-icon">
+                            <svg viewBox="0 0 100 100" class="babylon-svg">
+                                <rect x="15" y="40" width="70" height="50" fill="none" stroke="url(#stageGreen)" stroke-width="1.5"/>
+                                <rect x="25" y="30" width="50" height="15" fill="none" stroke="url(#stageGreen)" stroke-width="1"/>
+                                <rect x="35" y="20" width="30" height="15" fill="none" stroke="url(#stageGreen)" stroke-width="1"/>
+                                <line x1="20" y1="90" x2="20" y2="70" stroke="url(#stageGreen)" stroke-width="1.5"/>
+                                <line x1="80" y1="90" x2="80" y2="70" stroke="url(#stageGreen)" stroke-width="1.5"/>
+                                <line x1="35" y1="90" x2="35" y2="60" stroke="url(#stageGreen)" stroke-width="1"/>
+                                <line x1="65" y1="90" x2="65" y2="60" stroke="url(#stageGreen)" stroke-width="1"/>
+                                <defs>
+                                    <linearGradient id="stageGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#4a9e6b"/>
+                                        <stop offset="100%" style="stop-color:#8fd4a8"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="stage-glow green"></div>
+                    </div>
+                    <div class="stage-content">
+                        <span class="stage-number">02</span>
+                        <h3 class="stage-name">Babylon Underground</h3>
+                        <p class="stage-description">Descend into the Hanging Gardens. Deep house and organic beats flow through LED torches and low fog. The air is thick with mystery and ancient rhythm.</p>
+                        <div class="stage-features">
+                            <span><i class="fas fa-compact-disc"></i> Deep House</span>
+                            <span><i class="fas fa-compact-disc"></i> Organic House</span>
+                            <span><i class="fas fa-compact-disc"></i> Melodic Techno</span>
+                        </div>
+                        <div class="stage-tech">
+                            <div class="tech-item">
+                                <i class="fas fa-seedling"></i>
+                                <span>Hanging Gardens</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-fire-flame-curved"></i>
+                                <span>LED Torches</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-cloud"></i>
+                                <span>Low Fog</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-leaf"></i>
+                                <span>Living Plants</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atlantis -->
+                <div class="stage-card reveal">
+                    <div class="stage-visual">
+                        <div class="stage-icon atlantis-icon">
+                            <svg viewBox="0 0 100 100" class="atlantis-svg">
+                                <path d="M50,15 Q70,15 75,35 Q80,55 65,65 Q50,75 35,65 Q20,55 25,35 Q30,15 50,15" fill="none" stroke="url(#stageBlue)" stroke-width="1.5"/>
+                                <path d="M40,85 Q50,75 60,85" fill="none" stroke="url(#stageBlue)" stroke-width="1"/>
+                                <path d="M35,90 Q50,80 65,90" fill="none" stroke="url(#stageBlue)" stroke-width="0.8" opacity="0.6"/>
+                                <circle cx="50" cy="40" r="12" fill="none" stroke="url(#stageBlue)" stroke-width="1"/>
+                                <circle cx="50" cy="40" r="5" fill="url(#stageBlue)" opacity="0.3"/>
+                                <defs>
+                                    <linearGradient id="stageBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#1a8fbb"/>
+                                        <stop offset="100%" style="stop-color:#5ec4e8"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="stage-glow blue"></div>
+                    </div>
+                    <div class="stage-content">
+                        <span class="stage-number">03</span>
+                        <h3 class="stage-name">Atlantis</h3>
+                        <p class="stage-description">Submerge into the lost city. Turquoise and blue visuals simulate underwater ruins. Screens ripple like water as afro and progressive beats carry you into the sunrise.</p>
+                        <div class="stage-features">
+                            <span><i class="fas fa-compact-disc"></i> Afro House</span>
+                            <span><i class="fas fa-compact-disc"></i> Progressive House</span>
+                            <span><i class="fas fa-compact-disc"></i> Sunrise Sessions</span>
+                        </div>
+                        <div class="stage-tech">
+                            <div class="tech-item">
+                                <i class="fas fa-water"></i>
+                                <span>Water Screens</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-fish"></i>
+                                <span>Underwater Visuals</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-droplet"></i>
+                                <span>Turquoise Lasers</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-sun"></i>
+                                <span>Sunrise Mapping</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge reveal">𓃭 BEYOND THE MUSIC</span>
+                <h2 class="section-title reveal">EXPERIENCE ZONES</h2>
+                <p class="section-subtitle reveal">Immerse yourself in worlds beyond the dancefloor.</p>
+            </div>
+
+            <div class="experience-grid">
+                <div class="exp-card reveal" data-delay="0">
+                    <div class="exp-icon">
+                        <i class="fas fa-dungeon"></i>
+                    </div>
+                    <h3 class="exp-name">Archeological Tunnel</h3>
+                    <p class="exp-desc">An immersive corridor with ancient sounds, smoke, projections, and actors disguised as priests. Walk through time itself.</p>
+                    <div class="exp-features">
+                        <span><i class="fas fa-volume-high"></i> Spatial Audio</span>
+                        <span><i class="fas fa-cloud"></i> Haze Effects</span>
+                        <span><i class="fas fa-masks-theater"></i> Live Actors</span>
+                    </div>
+                </div>
+
+                <div class="exp-card reveal" data-delay="150">
+                    <div class="exp-icon">
+                        <i class="fas fa-crystal-ball"></i>
+                    </div>
+                    <h3 class="exp-name">Oracle Chamber</h3>
+                    <p class="exp-desc">AI-powered interactive experience. Receive personalized prophecies generated by artificial intelligence. Capture the moment at the photo booth.</p>
+                    <div class="exp-features">
+                        <span><i class="fas fa-robot"></i> AI Prophecies</span>
+                        <span><i class="fas fa-camera"></i> Photo Booth</span>
+                        <span><i class="fas fa-wand-sparkles"></i> Interactive</span>
+                    </div>
+                </div>
+
+                <div class="exp-card reveal" data-delay="300">
+                    <div class="exp-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3 class="exp-name">Pharaoh's Garden</h3>
+                    <p class="exp-desc">A chill-out zone with premium loungers, hookah lounge, and themed cocktails. Rest like royalty between sets.</p>
+                    <div class="exp-features">
+                        <span><i class="fas fa-wine-glass"></i> Cocktail Bar</span>
+                        <span><i class="fas fa-smoking"></i> Hookah Lounge</span>
+                        <span><i class="fas fa-star"></i> Premium Seating</span>
+                    </div>
+                </div>
+
+                <div class="exp-card reveal" data-delay="450">
+                    <div class="exp-icon">
+                        <i class="fas fa-building-columns"></i>
+                    </div>
+                    <h3 class="exp-name">VIP Pyramid Lounge</h3>
+                    <p class="exp-desc">Exclusive VIP area with bottle service, dedicated staff, and a direct view of the main stage. Only for the chosen ones.</p>
+                    <div class="exp-features">
+                        <span><i class="fas fa-champagne-glasses"></i> Bottle Service</span>
+                        <span><i class="fas fa-eye"></i> Stage View</span>
+                        <span><i class="fas fa-user-shield"></i> Private Staff</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entertainment Section -->
+    <section class="section entertainment-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge reveal">𓆣 SPECTACLES OF THE GODS</span>
+                <h2 class="section-title reveal">ENTERTAINMENT</h2>
+                <p class="section-subtitle reveal">Beyond DJs. These are rituals.</p>
+            </div>
+
+            <div class="entertainment-grid">
+                <div class="ent-card reveal reveal-scale" data-delay="0">
+                    <div class="ent-visual">
+                        <div class="ent-number">01</div>
+                        <div class="ent-glow"></div>
+                    </div>
+                    <h3>Opening Ritual</h3>
+                    <p>40 dancers. Tribal percussion. 360-degree visuals. The main DJ emerges from within the pyramid as the temple awakens.</p>
+                </div>
+
+                <div class="ent-card reveal reveal-scale" data-delay="200">
+                    <div class="ent-visual">
+                        <div class="ent-number">02</div>
+                        <div class="ent-glow fire"></div>
+                    </div>
+                    <h3>Fire Ceremony</h3>
+                    <p>Every 2 hours. Synchronized fire. CO2 jets. Golden lasers. Cold pyrotechnics. The crowd becomes one with the flame.</p>
+                </div>
+
+                <div class="ent-card reveal reveal-scale" data-delay="400">
+                    <div class="ent-visual">
+                        <div class="ent-number">03</div>
+                        <div class="ent-glow sky"></div>
+                    </div>
+                    <h3>Drone Show</h3>
+                    <p>50 drones form pyramids, the Eye of Horus, and the event logo in the sky. A spectacle visible from across the venue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge reveal">𓁹 VISIONS OF THE FUTURE</span>
+                <h2 class="section-title reveal">GALLERY</h2>
+                <p class="section-subtitle reveal">A glimpse into the world we're building.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item large reveal">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-landmark"></i>
+                        <span>Main Stage Concept</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-masks-theater"></i>
+                        <span>Opening Ritual</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-helicopter"></i>
+                        <span>Drone Formation</span>
+                    </div>
+                </div>
+                <div class="gallery-item tall reveal">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-fire"></i>
+                        <span>Fire Ceremony</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-wine-glass"></i>
+                        <span>Signature Cocktails</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-cloud"></i>
+                        <span>Babylon Stage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food & Drinks Section -->
+    <section class="section food-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge reveal">𓆣 FEAST OF THE PHARAOHS</span>
+                <h2 class="section-title reveal">FOOD & DRINKS</h2>
+                <p class="section-subtitle reveal">Taste the ancient world, reimagined.</p>
+            </div>
+
+            <div class="food-grid">
+                <div class="food-col">
+                    <h3 class="food-heading"><i class="fas fa-utensils"></i> Ancient Market</h3>
+                    <div class="food-items">
+                        <div class="food-item reveal reveal-left">
+                            <span class="food-flag">🇪🇬</span>
+                            <div>
+                                <h4>Egyptian Kitchen</h4>
+                                <p>Traditional flavors, modern presentation</p>
+                            </div>
+                        </div>
+                        <div class="food-item reveal reveal-left">
+                            <span class="food-flag">🇸🇦</span>
+                            <div>
+                                <h4>Arabic Kitchen</h4>
+                                <p>Spices and aromas from the desert</p>
+                            </div>
+                        </div>
+                        <div class="food-item reveal reveal-left">
+                            <span class="food-flag">🇬🇷</span>
+                            <div>
+                                <h4>Mediterranean Kitchen</h4>
+                                <p>Fresh, light, and divine</p>
+                            </div>
+                        </div>
+                        <div class="food-item reveal reveal-left">
+                            <span class="food-flag">🇯🇵</span>
+                            <div>
+                                <h4>Premium Sushi Bar</h4>
+                                <p>Fresh cuts, ancient art</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-col">
+                    <h3 class="food-heading"><i class="fas fa-champagne-glasses"></i> Signature Cocktails</h3>
+                    <div class="cocktail-grid">
+                        <div class="cocktail-card reveal">
+                            <div class="cocktail-icon">🍷</div>
+                            <h4>Pharaoh's Blood</h4>
+                            <p>Red wine reduction, pomegranate, gold leaf</p>
+                        </div>
+                        <div class="cocktail-card reveal">
+                            <div class="cocktail-icon">🥂</div>
+                            <h4>Golden Nile</h4>
+                            <p>Champagne, elderflower, edible gold</p>
+                        </div>
+                        <div class="cocktail-card reveal">
+                            <div class="cocktail-icon">🔥</div>
+                            <h4>Temple Fire</h4>
+                            <p>Mezcal, chili, mango, smoke</p>
+                        </div>
+                        <div class="cocktail-card reveal">
+                            <div class="cocktail-icon">🖤</div>
+                            <h4>Anubis</h4>
+                            <p>Activated charcoal, vodka, blackberry</p>
+                        </div>
+                        <div class="cocktail-card reveal">
+                            <div class="cocktail-icon">👑</div>
+                            <h4>Cleopatra</h4>
+                            <p>Gin, rose water, lychee, pearl dust</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="section sponsors-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge reveal">𓋴 POWERED BY</span>
+                <h2 class="section-title reveal">SPONSORS</h2>
+            </div>
+            <div class="sponsors-grid">
+                <div class="sponsor-item reveal"><span>Energy Brand</span></div>
+                <div class="sponsor-item reveal"><span>Tech Co</span></div>
+                <div class="sponsor-item reveal"><span>Fashion Label</span></div>
+                <div class="sponsor-item reveal"><span>Travel Agency</span></div>
+                <div class="sponsor-item reveal"><span>Spirits Brand</span></div>
+                <div class="sponsor-item reveal"><span>Auto Brand</span></div>
+            </div>
+            <div class="sponsors-cta reveal">
+                <p>Interested in partnering with us?</p>
+                <a href="#" class="btn btn-outline">BECOME A SPONSOR</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge reveal">𓁹 KNOW BEFORE YOU GO</span>
+                <h2 class="section-title reveal">FAQ</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>What is the minimum age to attend?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You must be 18 years or older to attend Lost Kingdoms. Valid government-issued ID is required at entry.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>What time does the event start and end?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Doors open at 10:00 PM. The event runs until 8:00 AM. We recommend arriving early to experience the full journey.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Is there a dress code?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We encourage creative, themed outfits inspired by ancient civilizations. Think gold, black, linen, jewels, and warrior aesthetics. Comfortable shoes are recommended.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Can I upgrade my ticket at the venue?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Subject to availability. We strongly recommend purchasing your desired tier in advance as higher tiers sell out quickly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>What is the refund policy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tickets are non-refundable but are transferable. You can change the name on your ticket through our app up to 48 hours before the event.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Is there parking available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, limited parking is available nearby. We recommend using our executive transport service or rideshare for convenience.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>What payment methods are accepted?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The event is fully cashless. All purchases are made via RFID wristbands linked to your credit card or digital wallet through our app.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Is the venue accessible?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, the venue is fully accessible. Please contact us in advance for any specific accessibility needs and we'll ensure your experience is seamless.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Section -->
+    <section class="section app-section">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-info">
+                    <span class="section-badge reveal">𓋴 YOUR DIGITAL COMPANION</span>
+                    <h2 class="section-title reveal">THE APP</h2>
+                    <p class="app-desc">Everything you need in one place. The Lost Kingdoms app is your gateway to the experience.</p>
+
+                    <div class="app-features">
+                        <div class="app-feature reveal reveal-left">
+                            <i class="fas fa-qrcode"></i>
+                            <div>
+                                <h4>QR Entry</h4>
+                                <p>Seamless, contactless entry</p>
+                            </div>
+                        </div>
+                        <div class="app-feature reveal reveal-left">
+                            <i class="fas fa-wallet"></i>
+                            <div>
+                                <h4>Digital Wallet</h4>
+                                <p>Cashless payments via RFID</p>
+                            </div>
+                        </div>
+                        <div class="app-feature reveal reveal-left">
+                            <i class="fas fa-calendar"></i>
+                            <div>
+                                <h4>DJ Schedule</h4>
+                                <p>Never miss your favorite set</p>
+                            </div>
+                        </div>
+                        <div class="app-feature reveal reveal-left">
+                            <i class="fas fa-map"></i>
+                            <div>
+                                <h4>Interactive Map</h4>
+                                <p>Navigate stages and zones</p>
+                            </div>
+                        </div>
+                        <div class="app-feature reveal reveal-left">
+                            <i class="fas fa-bell"></i>
+                            <div>
+                                <h4>Push Notifications</h4>
+                                <p>Real-time event updates</p>
+                            </div>
+                        </div>
+                        <div class="app-feature reveal reveal-left">
+                            <i class="fas fa-chair"></i>
+                            <div>
+                                <h4>Table Reservations</h4>
+                                <p>Book VIP tables in-app</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="app-download">
+                        <a href="#" class="store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div>
+                                <span class="store-small">Download on the</span>
+                                <span class="store-big">App Store</span>
+                            </div>
+                        </a>
+                        <a href="#" class="store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div>
+                                <span class="store-small">Get it on</span>
+                                <span class="store-big">Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="app-mockup reveal reveal-right">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <span class="phone-time">22:45</span>
+                                <span class="phone-logo">LOST KINGDOMS</span>
+                                <span class="phone-icons"><i class="fas fa-signal"></i> <i class="fas fa-battery-full"></i></span>
+                            </div>
+                            <div class="phone-content">
+                                <div class="phone-welcome">
+                                    <span class="phone-greeting">Welcome back,</span>
+                                    <span class="phone-name">Pharaoh</span>
+                                </div>
+                                <div class="phone-ticket-card">
+                                    <div class="phone-ticket-info">
+                                        <span class="phone-tier">PHARAOH PASS</span>
+                                        <span class="phone-date">DEC 12, 2027</span>
+                                    </div>
+                                    <div class="phone-qr">
+                                        <div class="qr-pattern"></div>
+                                    </div>
+                                </div>
+                                <div class="phone-next">
+                                    <span>NOW PLAYING</span>
+                                    <div class="phone-now-playing">
+                                        <div class="phone-dj-avatar"></div>
+                                        <div>
+                                            <span class="phone-dj-name">DJ TBA</span>
+                                            <span class="phone-stage-name">Temple of Ra</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="phone-nav">
+                                    <span class="active"><i class="fas fa-home"></i></span>
+                                    <span><i class="fas fa-calendar"></i></span>
+                                    <span><i class="fas fa-map"></i></span>
+                                    <span><i class="fas fa-wallet"></i></span>
+                                    <span><i class="fas fa-user"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="cta-bg">
+            <div class="cta-particles"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title reveal">ARE YOU READY TO<br><span>AWAKEN THE KINGDOM?</span></h2>
+                <p class="cta-subtitle">December 12, 2027 | Buenos Aires, Argentina</p>
+                <div class="cta-countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number cta-days">000</span>
+                        <span class="countdown-label">DAYS</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number cta-hours">00</span>
+                        <span class="countdown-label">HOURS</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number cta-minutes">00</span>
+                        <span class="countdown-label">MINUTES</span>
+                    </div>
+                </div>
+                <a href="#tickets" class="btn btn-primary btn-large">
+                    <span class="btn-icon">𓋴</span>
+                    <span>GET YOUR TICKETS NOW</span>
+                    <span class="btn-glow"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="logo-icon">𓂀</span>
+                            <span class="logo-text">LOST KINGDOMS</span>
+                        </div>
+                        <p class="footer-tagline">"Dance where forgotten empires awaken."</p>
+                        <div class="footer-socials">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-spotify"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Event</h4>
+                        <ul>
+                            <li><a href="#tickets">Tickets</a></li>
+                            <li><a href="#lineup">Lineup</a></li>
+                            <li><a href="#stages">Stages</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Info</h4>
+                        <ul>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Extras</h4>
+                        <ul>
+                            <li><a href="#">Download App</a></li>
+                            <li><a href="#">VIP Tables</a></li>
+                            <li><a href="#">Sponsorships</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Volunteer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2027 Lost Kingdoms. All rights reserved.</p>
+                <p class="footer-hieroglyphs">𓀀 𓁹 𓂀 𓃭 𓆣 𓇋 𓈖 𓋴 𓌙 𓍯 𓎡 𓏏</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Trailer Modal -->
+    <div class="modal" id="trailerModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-video">
+                <div class="modal-placeholder">
+                    <i class="fas fa-play"></i>
+                    <p>Trailer coming soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Buy Button (Mobile) -->
+    <div class="sticky-buy" id="stickyBuy">
+        <div class="sticky-info">
+            <span class="sticky-event">LOST KINGDOMS</span>
+            <span class="sticky-date">DEC 12, 2027</span>
+        </div>
+        <a href="#tickets" class="sticky-btn">BUY TICKETS</a>
+    </div>
+
+    <script>
+        // Fallback: if GSAP CDN fails, define stubs so JS doesn't break
+        window.gsapReady = false;
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" 
+            onload="window.gsapReady=true;" 
+            onerror="console.warn('GSAP CDN failed, using CSS fallback');"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+            onerror="console.warn('ScrollTrigger CDN failed');"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
